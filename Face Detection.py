@@ -25,11 +25,7 @@ def detect_face(fix_img):
     face_rects=face_classifier.detectMultiScale(fix_img)
     
     for (x,y,w,h) in face_rects:
-        cv2.rectangle(fix_img,
-                     (x,y),
-                     (x+w, y+h),
-                     (255,0,0),
-                     10)
+        cv2.rectangle(fix_img, (x,y), (x+w, y+h), (255,0,0), 10)
     return fix_img
 
 result=detect_face(fix_img)
